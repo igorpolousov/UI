@@ -76,4 +76,36 @@ class LoginFormController: UIViewController {
         // присваеваем его UIScrollview
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Проверяем данные введённые пользователем
+        let checkResult = checkUserData()
+        // Если данные неверны, покажем ошибку
+        if !checkResult {
+            showLoginError()
+        }
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
+        guard let login = loginInput.text,
+              let password = passwordInput.text else {return false}
+        
+        if login == "admin" && password == "123456"{
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError(){
+        // создаём контроллер
+        let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+        // создаём кнопку для UIAlertController
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        // добавляем кнопку на UIAlertController
+        alert.addAction(action)
+        // показываем UIAlertController
+        present(alert, animated: true, completion: nil)
+    }
 }
