@@ -13,3 +13,11 @@ struct AllGroups {
     var photo: UIImage
 }
 
+extension AllGroups: Equatable {
+    static func == (lhs: AllGroups, rhs: AllGroups) -> Bool{
+        return lhs.name == rhs.name &&
+            lhs.photo == rhs.photo
+    }
+}
+
+

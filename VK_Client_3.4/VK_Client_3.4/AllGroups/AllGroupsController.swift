@@ -9,12 +9,12 @@ import UIKit
 
 class AllGroupsController: UITableViewController {
     
+   
     var allGroups = [
-        (name: "Enduro Motorsport", photo: UIImage.init(imageLiteralResourceName: "enduro-motorsport")),
-        (name: "World trading", photo: UIImage.init(imageLiteralResourceName: "world-trading")),
-        (name: "Swift", photo: UIImage.init(imageLiteralResourceName: "swift"))
+        AllGroups(name: "Enduro Motorsport", photo: UIImage.init(imageLiteralResourceName: "enduro-motorsport")),
+        AllGroups(name: "World trading", photo: UIImage.init(imageLiteralResourceName: "world-trading")),
+        AllGroups(name: "Swift", photo: UIImage.init(imageLiteralResourceName: "swift"))
        ]
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

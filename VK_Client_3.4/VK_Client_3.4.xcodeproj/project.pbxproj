@@ -128,7 +128,6 @@
 				C24FCB8C2607CBD700F50032 /* Friends */,
 				C24FCB4E2607C72000F50032 /* AppDelegate.swift */,
 				C24FCB502607C72000F50032 /* SceneDelegate.swift */,
-				C24FCBDD2607E99F00F50032 /* ShadowView.swift */,
 				C24FCB842607C76000F50032 /* LoginFormController.swift */,
 				C24FCB542607C72000F50032 /* Main.storyboard */,
 				C24FCB572607C72200F50032 /* Assets.xcassets */,
@@ -197,6 +196,7 @@
 			children = (
 				C24FCBC52607D0EE00F50032 /* FriendStruct.swift */,
 				C24FCBCD2607D11100F50032 /* GroupStruct.swift */,
+				C24FCBDD2607E99F00F50032 /* ShadowView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

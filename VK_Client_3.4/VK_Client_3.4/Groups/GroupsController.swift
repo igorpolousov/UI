@@ -9,7 +9,7 @@ import UIKit
 
 class GroupsController: UITableViewController {
     
-    var myGroups = [(name: "Enduro Motorsport", photo: UIImage.init(imageLiteralResourceName: "enduro-motorsport"))]
+    var myGroups: [AllGroups] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class GroupsController: UITableViewController {
                 
                 let group = allGroupsController.allGroups[indexPath.row]
                
-                if   (myGroups.firstIndex(where: {$0 != group}) != nil) {
+                if   !myGroups.contains(group) {
                 myGroups.append(group)
                     tableView.reloadData()
                 }
